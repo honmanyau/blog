@@ -1,6 +1,6 @@
-# honmanyau.github.io
+# Blog
 
-Personal blog created with Hexo.
+> Personal blog created with Hexo.
 
 # License
 
