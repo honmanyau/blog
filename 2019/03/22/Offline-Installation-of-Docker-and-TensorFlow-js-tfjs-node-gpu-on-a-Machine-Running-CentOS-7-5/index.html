@@ -90,20 +90,25 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Honman Yau">
-<meta property="og:url" content="https://honmanyau.github.io/index.html">
+  <meta name="description" content="Table of Contents Backstory Introduction Installing Docker Determining the Appropriate Version of Docker to Install Downloading Dependencies Installing Docker on Both Machines Testing the Docker Insta">
+<meta name="keywords" content="tensorflow.js,tjfs,docker,centos,offline">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Offline Installation of Docker and TensorFlow.js (tfjs-node-gpu) on a Machine Running CentOS 7.5">
+<meta property="og:url" content="https://honmanyau.github.io/2019/03/22/Offline-Installation-of-Docker-and-TensorFlow-js-tfjs-node-gpu-on-a-Machine-Running-CentOS-7-5/index.html">
 <meta property="og:site_name" content="Honman Yau">
+<meta property="og:description" content="Table of Contents Backstory Introduction Installing Docker Determining the Appropriate Version of Docker to Install Downloading Dependencies Installing Docker on Both Machines Testing the Docker Insta">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-03-22T04:36:52.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Honman Yau">
+<meta name="twitter:title" content="Offline Installation of Docker and TensorFlow.js (tfjs-node-gpu) on a Machine Running CentOS 7.5">
+<meta name="twitter:description" content="Table of Contents Backstory Introduction Installing Docker Determining the Appropriate Version of Docker to Install Downloading Dependencies Installing Docker on Both Machines Testing the Docker Insta">
 
 
 
 
 
 
-  <link rel="canonical" href="https://honmanyau.github.io/">
+  <link rel="canonical" href="https://honmanyau.github.io/2019/03/22/Offline-Installation-of-Docker-and-TensorFlow-js-tfjs-node-gpu-on-a-Machine-Running-CentOS-7-5/">
 
 
 
@@ -113,7 +118,7 @@
   };
 </script>
 
-  <title>Honman Yau</title>
+  <title>Offline Installation of Docker and TensorFlow.js (tfjs-node-gpu) on a Machine Running CentOS 7.5 | Honman Yau</title>
   
 
 
@@ -161,8 +166,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -291,9 +295,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -325,10 +329,8 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/blog/2019/03/22/Offline-Installation-of-Docker-and-TensorFlow-js-tfjs-node-gpu-on-a-Machine-Running-CentOS-7-5/" class="post-title-link" itemprop="url">Offline Installation of Docker and TensorFlow.js (tfjs-node-gpu) on a Machine Running CentOS 7.5</a>
+          <h1 class="post-title" itemprop="name headline">Offline Installation of Docker and TensorFlow.js (tfjs-node-gpu) on a Machine Running CentOS 7.5
+
               
             
           </h1>
@@ -388,9 +390,7 @@
       
 
       
-        
-          
-            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="Table-of-Contents"><a href="#Table-of-Contents" class="headerlink" title="Table of Contents"></a>Table of Contents</h2><ul>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h2 id="Table-of-Contents"><a href="#Table-of-Contents" class="headerlink" title="Table of Contents"></a>Table of Contents</h2><ul>
 <li><a href="#Backstory">Backstory</a></li>
 <li><a href="#Introduction">Introduction</a></li>
 <li><a href="#Installing-Docker">Installing Docker</a><ul>
@@ -607,8 +607,6 @@
 </li>
 </ol>
 <div id="footnotes"><hr><div id="footnotelist"><ol style="list-style: none; padding-left: 0; margin-left: 40px"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">1.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://docs.docker.com/install/linux/docker-ce/centos" target="_blank" rel="noopener">Docker Documentation | Get Docker CE for CentOS</a><a href="#fnref:1" rev="footnote"> ↩</a></span></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">2.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://codefarm.me/2018/03/30/setup-docker-engine-on-centos-offline" target="_blank" rel="noopener">CODE FARM | Setup Docker Engine on Centos Offline</a><a href="#fnref:2" rev="footnote"> ↩</a></span></li><li id="fn:3"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">3.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://davidwzhang.com/2018/11/17/install-docker-offline-on-centos7" target="_blank" rel="noopener">InsidePacket | Install Docker Offline on Centos7</a><a href="#fnref:3" rev="footnote"> ↩</a></span></li><li id="fn:4"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">4.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">For example: <code>yumdownloader docker-ce-18.03.1.ce-1.el7.centos</code>.<a href="#fnref:4" rev="footnote"> ↩</a></span></li><li id="fn:5"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">5.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">With <code>scp</code> if the machine is in the same local network as the machine connceted to the Internet; otherwise, with your choice of portable storage medium.<a href="#fnref:5" rev="footnote"> ↩</a></span></li><li id="fn:6"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">6.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">For example: <code>rpm -ivh docker-ce-18.03.1.ce-1.el7.centos.x86_64.rpm</code>.<a href="#fnref:6" rev="footnote"> ↩</a></span></li><li id="fn:7"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">7.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">This is only an indication for what may work for you in case you are running CentOS 7.5.1804; as I didn’t set up the offline from scratch, it is not clear whether or not some of the dependencies that require rebooting was already installed before I started.<a href="#fnref:7" rev="footnote"> ↩</a></span></li><li id="fn:8"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">8.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">You may skip this if you are transferring using your favourite portable storage medium.<a href="#fnref:8" rev="footnote"> ↩</a></span></li><li id="fn:9"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">9.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">The version number shown in the code snippet is only an example.<a href="#fnref:9" rev="footnote"> ↩</a></span></li><li id="fn:10"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">10.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;"><a href="https://github.com/NVIDIA/nvidia-docker" target="_blank" rel="noopener">GitHub—NVIDIA/nvidia-docker &gt; CentOS 7 (docker-ce), RHEL 7.4/7.5 (docker-ce), Amazon Linux 1/2</a><a href="#fnref:10" rev="footnote"> ↩</a></span></li><li id="fn:11"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">11.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">The GPUs are in use in the example shown.<a href="#fnref:11" rev="footnote"> ↩</a></span></li><li id="fn:12"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">12.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">It is worth noting that you may wish to specify the tag differently to include version information and/or author information, for example: <code>honmanyau/tfjs-node-gpu:1.0.0</code>.<a href="#fnref:12" rev="footnote"> ↩</a></span></li><li id="fn:13"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">13.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">You may also use any Node.js, npm and yarn installation that you already have on your system.<a href="#fnref:13" rev="footnote"> ↩</a></span></li><li id="fn:14"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">14.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">This step assumes that you started the container with the <code>-v $(pwd):/app</code> option, so that the working directory inside the docker instance is the <code>machine-learning</code> directory outside of the container.<a href="#fnref:14" rev="footnote"> ↩</a></span></li><li id="fn:15"><span style="display: inline-block; vertical-align: top; padding-right: 10px; margin-left: -40px">15.</span><span style="display: inline-block; vertical-align: top; margin-left: 10px;">The <code>–update-checksums</code> flag is necessary because we have edited the <code>tfjs-node-gpu</code> archive (<a href="https://yarnpkg.com/lang/en/docs/cli/install/" target="_blank" rel="noopener">yarn documentation</a>).<a href="#fnref:15" rev="footnote"> ↩</a></span></li></ol></div></div>
-          
-        
       
     </div>
 
@@ -629,14 +627,28 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/blog/tags/tensorflow-js/" rel="tag"># tensorflow.js</a>
+          
+            <a href="/blog/tags/tjfs/" rel="tag"># tjfs</a>
+          
+            <a href="/blog/tags/docker/" rel="tag"># docker</a>
+          
+            <a href="/blog/tags/centos/" rel="tag"># centos</a>
+          
+            <a href="/blog/tags/offline/" rel="tag"># offline</a>
+          
+        </div>
+      
+
+      
+      
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -646,14 +658,15 @@
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -673,8 +686,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -741,6 +763,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Table-of-Contents"><span class="nav-number">1.</span> <span class="nav-text">Table of Contents</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Backstory"><span class="nav-number">2.</span> <span class="nav-text">Backstory</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">3.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Installing-Docker"><span class="nav-number">4.</span> <span class="nav-text">Installing Docker</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Determining-the-Appropriate-Version-of-Docker-to-Install"><span class="nav-number">4.1.</span> <span class="nav-text">Determining the Appropriate Version of Docker to Install</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Downloading-Dependencies"><span class="nav-number">4.2.</span> <span class="nav-text">Downloading Dependencies</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Installing-Docker-on-Both-Machines"><span class="nav-number">4.3.</span> <span class="nav-text">Installing Docker on Both Machines</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Testing-the-Docker-Installations"><span class="nav-number">4.4.</span> <span class="nav-text">Testing the Docker Installations</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Installing-nvidia-docker2"><span class="nav-number">5.</span> <span class="nav-text">Installing nvidia-docker2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Creating-a-Node-js-Docker-Image"><span class="nav-number">6.</span> <span class="nav-text">Creating a Node.js Docker Image</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Downloading-Node-js-Dependencies"><span class="nav-number">7.</span> <span class="nav-text">Downloading Node.js Dependencies</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Modifying-the-tfjs-node-gpu-Module-for-Offline-Installation"><span class="nav-number">8.</span> <span class="nav-text">Modifying the tfjs-node-gpu Module for Offline Installation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Setting-up-tfjs-node-gpu-on-the-Offline-Machine"><span class="nav-number">9.</span> <span class="nav-text">Setting up tfjs-node-gpu on the Offline Machine</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -869,6 +908,10 @@
 
 
   
+  <script src="/blog/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/blog/js/src/post-details.js?v=7.0.1"></script>
+
+
 
   
 
@@ -884,6 +927,8 @@
 
   
 
+
+  
 
 
   
